@@ -29,9 +29,3 @@ personGender (Person _ _ gender) = case gender of
                                    Male    -> 1
                                    Female  -> 0
                                    Unknown -> 0
-
-countGender:: [Person] -> Int
-countGender personList = let p = (head personList)
-                         in if null (tail personList) then
-                             personGender p
-                            else personGender p + countGender (tail personList)
